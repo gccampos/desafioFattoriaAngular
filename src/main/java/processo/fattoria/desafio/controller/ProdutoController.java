@@ -15,11 +15,10 @@ import org.springframework.web.servlet.ModelAndView;
  * @author usuario
  */
 @Controller
-@RequestMapping("/")
 public class ProdutoController {
 
-    @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView getAngularPage() {
-        return new ModelAndView("produto");
+    @RequestMapping(method = RequestMethod.GET, value = "produto")
+    public String getAngularPage() {
+        return "produto";
     }
 }
